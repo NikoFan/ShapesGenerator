@@ -1,0 +1,51 @@
+﻿<Window
+    x:Class="ShapeCreator.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ShapeCreator"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="400"
+    Height="600"
+    ResizeMode="NoResize"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <Grid x:Name="WindowHead" Style="{StaticResource windowHeadGridPlace_style}">
+                <!--  Блок кнопок  -->
+                <StackPanel x:Name="buttonsBlock" Style="{StaticResource headButtonsPlace_style}">
+                    <Button
+                        x:Name="SquareCreator"
+                        Click="createShape"
+                        Content="Квадрат"
+                        Style="{StaticResource buttonsStyle}" />
+                    <Button
+                        x:Name="TriangleCreator"
+                        Click="createShape"
+                        Content="Треугольник"
+                        Style="{StaticResource buttonsStyle}" />
+                    <Button
+                        x:Name="RectangleCreator"
+                        Click="createShape"
+                        Content="Прямоугольник"
+                        Style="{StaticResource buttonsStyle}" />
+                    <Button
+                        x:Name="CircleCreator"
+                        Click="createShape"
+                        Content="Круг"
+                        Style="{StaticResource buttonsStyle}" />
+                    <Button
+                        x:Name="StarCreator"
+                        Click="createShape"
+                        Content="Звездочка"
+                        Style="{StaticResource buttonsStyle}" />
+                </StackPanel>
+            </Grid>
+
+            <!--  Область визуализации фигур  -->
+            <Grid x:Name="ShapeShower" Height="400" />
+        </StackPanel>
+
+    </Grid>
+</Window>
